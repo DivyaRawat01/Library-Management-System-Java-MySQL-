@@ -5,14 +5,13 @@ import java.util.Scanner;
 public class LibrarySystem {
     private static final String URL = "jdbc:mysql://localhost:3306/librarydb";
     private static final String USER = "root";
-    private static final String PASSWORD = "dr9675@#";
+    private static final String PASSWORD = "add your password";
 
     private static Connection conn;
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(URL, USER, PASSWORD);
             System.out.println("Connected to the database!");
             int choice;
@@ -99,3 +98,4 @@ public class LibrarySystem {
         System.out.println(rows + " book(s) deleted.");
     }
 }
+
