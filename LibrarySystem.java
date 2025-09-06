@@ -3,7 +3,7 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class LibrarySystem {
-    private static final String URL = "jdbc:mysql://localhost:3306/librarydb";
+    private static final String URL = "jdbc:mysql://localhost:3306/database_name";
     private static final String USER = "root";
     private static final String PASSWORD = "add your password";
 
@@ -48,7 +48,7 @@ public class LibrarySystem {
         System.out.print("Enter publication year: ");
         int year = Integer.parseInt(scanner.nextLine());
 
-        String sql = "INSERT INTO books (title, author, year) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO table_name (title, author, year) VALUES (?, ?, ?)";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, title);
         pstmt.setString(2, author);
@@ -98,4 +98,5 @@ public class LibrarySystem {
         System.out.println(rows + " book(s) deleted.");
     }
 }
+
 
